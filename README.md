@@ -5,5 +5,5 @@
 
 # 9 basic annotations 
 - Branch [`version/basic-annotations`](https://github.com/geraldnguyen/getting-started-api-with-java/tree/version/basic-annotations) - `git checkout version/basic-annotations`
-- Video: <todo>
+- Video: https://www.youtube.com/watch?v=4zDdhrehYh4
 - Article: <todo>
