@@ -6,4 +6,4 @@
 # 9 basic annotations 
 - Branch [`version/basic-annotations`](https://github.com/geraldnguyen/getting-started-api-with-java/tree/version/basic-annotations) - `git checkout version/basic-annotations`
 - Video: https://www.youtube.com/watch?v=4zDdhrehYh4
-- Article: <todo>
+- Article: https://medium.com/gitconnected/rest-api-9-basic-spring-annotations-to-master-70922c3155e0?sk=3f551765100fecbec6ca6dfe1d69556e
