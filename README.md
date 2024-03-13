@@ -12,3 +12,9 @@
 - Branch [`version/beyond-basic-restcontroller`](https://github.com/geraldnguyen/getting-started-api-with-java/tree/version/beyond-basic-restcontroller) - `git checkout version/beyond-basic-restcontroller`
 - Video: https://www.youtube.com/watch?v=5yuiIY7rOsM
 - Article: https://medium.com/gitconnected/rest-api-annotations-beyond-basic-restcontroller-12e476908cf7
+- 
+# Beyond basic - @RequestMapping, @GetMapping, @PostMapping, @PutMapping, @DeleteMapping
+- Branch [`version/beyond-basic-restcontroller`](https://github.com/geraldnguyen/getting-started-api-with-java/tree/version/beyond-basic-requestmapping) - `git checkout version/beyond-basic-requestmapping`
+- Video: TODO
+- Article: TODO
+
