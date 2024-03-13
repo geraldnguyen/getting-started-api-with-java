@@ -15,6 +15,6 @@
 - 
 # Beyond basic - @RequestMapping, @GetMapping, @PostMapping, @PutMapping, @DeleteMapping
 - Branch [`version/beyond-basic-restcontroller`](https://github.com/geraldnguyen/getting-started-api-with-java/tree/version/beyond-basic-requestmapping) - `git checkout version/beyond-basic-requestmapping`
-- Video: TODO
+- Video: https://youtu.be/JXNiut84xqk?si=v-rw9FbVERVrJ11l
 - Article: TODO
 
