@@ -8,14 +8,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/appointments")
+@RequestMapping(path = { "/appointments", "/calendar" })
 public class AppointmentAPI {
     @Autowired
     private AppointmentService appointmentService;
 
 
     // Listing
-    @GetMapping("/")
+    @GetMapping(value = { "/", "/get-appointments" }, headers = "user-agent!=PostmanRuntime/7.29.0")
     public List<AppointmentDTO> list() {
         return this.appointmentService.listAppointments();
     }
@@ -31,8 +31,6 @@ public class AppointmentAPI {
     public List<AppointmentDTO> search(@RequestParam("date") String date) {
         return this.appointmentService.findAppointmentByDate(date);
     }
-
-
 
     // Create new appointment
     @PostMapping("/")
