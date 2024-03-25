@@ -12,3 +12,8 @@
 - Branch [`version/beyond-basic-restcontroller`](https://github.com/geraldnguyen/getting-started-api-with-java/tree/version/beyond-basic-restcontroller) - `git checkout version/beyond-basic-restcontroller`
 - Video: https://www.youtube.com/watch?v=5yuiIY7rOsM
 - Article: https://medium.com/gitconnected/rest-api-annotations-beyond-basic-restcontroller-12e476908cf7
+
+# Beyond basic - @PathVariable, @RequestParam, @RequestBody - Input validation
+- Branch [`version/beyond-basic-input-validation`](https://github.com/geraldnguyen/getting-started-api-with-java/tree/version/beyond-basic-input-validation) - `git checkout version/beyond-basic-input-validation`
+- Video: TODO
+- Article: TODO
