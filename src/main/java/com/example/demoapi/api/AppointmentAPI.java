@@ -2,6 +2,7 @@ package com.example.demoapi.api;
 
 import com.example.demoapi.data.AppointmentDTO;
 import com.example.demoapi.service.AppointmentService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -40,7 +41,7 @@ public class AppointmentAPI {
 
     // update an existing appointment
     @PutMapping("/{id}")
-    public void update(@PathVariable("id") Long id, @RequestBody AppointmentDTO appointmentDTO) {
+    public void update(@PathVariable("id") Long id, @Valid @RequestBody AppointmentDTO appointmentDTO) {
         this.appointmentService.updateAppointment(id, appointmentDTO);
     }
 
