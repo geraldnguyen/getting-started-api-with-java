@@ -31,9 +31,9 @@ public class AppointmentAPI {
 
     // Search: e.g. GET /appointments/search?date=2024-02-01
     @GetMapping("/search")
-    public List<AppointmentDTO> search(@RequestParam("date") Optional<String> date) {
-        if (date.isEmpty()) return appointmentService.listAppointments();
-        else return this.appointmentService.findAppointmentByDate(date.get());
+    public List<AppointmentDTO> search(@RequestParam(value = "date", required = false) String date) {
+        if (date == null) return appointmentService.listAppointments();
+        else return this.appointmentService.findAppointmentByDate(date);
     }
 
     // Create new appointment
