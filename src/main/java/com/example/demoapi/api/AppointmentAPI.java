@@ -4,6 +4,7 @@ import com.example.demoapi.data.AppointmentDTO;
 import com.example.demoapi.service.AppointmentService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,6 +35,11 @@ public class AppointmentAPI {
     public List<AppointmentDTO> search(@RequestParam(value = "date", required = false) String date) {
         if (date == null) return appointmentService.listAppointments();
         else return this.appointmentService.findAppointmentByDate(date);
+    }
+
+    @GetMapping("/dates/{date}")
+    public List<AppointmentDTO> searchByDate(@PathVariable(value = "date") @Pattern(regexp = "\\d{4}-\\d{2}-\\d{2}") String date) {
+        return this.appointmentService.findAppointmentByDate(date);
     }
 
     // Create new appointment
