@@ -3,10 +3,12 @@ package com.example.demoapi.api;
 import com.example.demoapi.data.AppointmentDTO;
 import com.example.demoapi.service.AppointmentService;
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotBlank;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/appointments")
@@ -29,8 +31,9 @@ public class AppointmentAPI {
 
     // Search: e.g. GET /appointments/search?date=2024-02-01
     @GetMapping("/search")
-    public List<AppointmentDTO> search(@RequestParam("date") String date) {
-        return this.appointmentService.findAppointmentByDate(date);
+    public List<AppointmentDTO> search(@RequestParam("date") Optional<String> date) {
+        if (date.isEmpty()) return appointmentService.listAppointments();
+        else return this.appointmentService.findAppointmentByDate(date.get());
     }
 
     // Create new appointment
