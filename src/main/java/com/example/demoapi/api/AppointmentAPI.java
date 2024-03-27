@@ -32,8 +32,6 @@ public class AppointmentAPI {
         return this.appointmentService.findAppointmentByDate(date);
     }
 
-
-
     // Create new appointment
     @PostMapping("/")
     public void create(@RequestBody AppointmentDTO appointmentDTO) {
@@ -51,6 +49,4 @@ public class AppointmentAPI {
     public void delete(@PathVariable("id") Long id) {
         this.appointmentService.deleteAppointment(id);
     }
-
-
 }
