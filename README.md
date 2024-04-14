@@ -15,5 +15,5 @@
 
 # Beyond basic - @PathVariable, @RequestParam, @RequestBody - Input validation
 - Branch [`version/beyond-basic-input-validation`](https://github.com/geraldnguyen/getting-started-api-with-java/tree/version/beyond-basic-input-validation) - `git checkout version/beyond-basic-input-validation`
-- Video: TODO
+- Video: https://youtu.be/a759XX9rRDo
 - Article: TODO
