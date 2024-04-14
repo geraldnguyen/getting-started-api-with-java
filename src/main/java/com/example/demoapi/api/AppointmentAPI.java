@@ -6,8 +6,10 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,6 +19,17 @@ public class AppointmentAPI {
     @Autowired
     private AppointmentService appointmentService;
 
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
+
+    // View details
+    @GetMapping("/unsafe-view/{id}")
+    public AppointmentDTO unsafeView(@PathVariable("id") Long id) {
+        return jdbcTemplate.query("SELECT id, date, title from Appointment WHERE id = " + id,
+                        (rs, rowNum) ->
+                                new AppointmentDTO(rs.getLong(1), LocalDate.parse(rs.getString(2)), rs.getString(3)))
+                .get(0);
+    }
 
     // Listing
     @GetMapping("/")
